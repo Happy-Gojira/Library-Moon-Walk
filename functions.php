@@ -96,7 +96,7 @@ function moon_insert_into_db() {
             )
         );
         if ($distance == 1) {
-          $html = "<p>You moved <strong>$distance mile</strong> closer to the moon. You're awesome!!</p>";
+          $html = "<p>You moved <strong>$distance mile</strong> closer to the moon. You're awesome!!</p><br><p></p>";
         }
         else {
           $html = "<p>You moved <strong>$distance miles</strong> closer to the moon. You're awesome!!</p>";

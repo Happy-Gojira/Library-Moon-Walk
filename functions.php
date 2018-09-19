@@ -39,7 +39,7 @@ function moon_insert_into_db() {
     // starts output buffering
     ob_start();
     ?>
-    <form action="#v_form" name="stepsToMoon" method="POST" class="moonwalkform" id="v_form">
+    <form name="stepsToMoon" method="POST" class="moonwalkform">
       <fieldset>
         <legend>Input your Exercise--steps, miles, or minutes</legend>
         <input type="text" id="distance" name="distance" placeholder="Enter Your Distance or Time"><br>

@@ -1,6 +1,11 @@
+body{
+	font-family:"futura-pt", sans-serif;
+}
+
 input[type="text"]{
-  width:15em;
-  font-size: 3em;
+  font-family: "futura-pt-condensed",sans-serif;
+  width:14em;
+  font-size: 1.4em;
 }
 input[type=submit]{
   margin-top:5px;
@@ -9,7 +14,6 @@ input[type=submit]{
   border:none;
   color:#0e2846;
 }
-
 
 .all-rounded {
     -webkit-border-radius: 5px;
@@ -22,17 +26,17 @@ input[type=submit]{
 }
 
 #progress-bar {
-    width: 70%;;
+    width: 80%;;
     background: #cccccc;
     position: relative;
 }
 
 #progress-bar-percentage {
-    background: #3063A5;
+    background: #f2c94c;
     padding: 5px 0px;
     color: #FFF;
     text-align: center;
-    height: 20px;
+    height: 40px;
 }
 
 #progress-bar-percentage span {
@@ -41,6 +45,17 @@ input[type=submit]{
     width: 100%;
     left: 0;
 }
+.wide-grey.panel-row-style{border:none;}
+
+/*Allow background image to be seen*/
 .home #main {
     background-color: transparent !important;
+}
+
+body.responsive.layout-full #page-wrapper .full-container{
+  max-width:95%;
+}
+
+.encourage{
+  font-size:125%;
 }

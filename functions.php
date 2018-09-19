@@ -102,7 +102,7 @@ function moon_insert_into_db() {
           $html = "<p>You moved <strong>$distance miles</strong> closer to the moon. You're awesome!!</p>";
         }
     }
-    // if the form is submitted but the name is empty
+    // if the form is submitted but isn't filled correctly
     if ( isset( $_POST["submit_form"] ) && ($_POST["distance"] == "" || strlen($_POST["zipcode"]) != 5))
         $html .= "<p>You need to enter a distance and a zipcode.</p>";
     // outputs everything
@@ -112,6 +112,7 @@ function moon_insert_into_db() {
 // adds a shortcode you can use: [insert-into-db]
 add_shortcode('moon-db-insert', 'moon_insert_into_db');
 
+// function to pull the data and build a bar graph
 function jms_pull_from_db() {
 
     global $wpdb;

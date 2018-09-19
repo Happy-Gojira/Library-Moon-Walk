@@ -96,10 +96,10 @@ function moon_insert_into_db() {
             )
         );
         if ($distance == 1) {
-          $html = "<p>You moved <strong>$distance mile</strong> closer to the moon. You're awesome!!</p><br><p></p>";
+          $html = "<p>You moved <strong>$distance mile</strong> closer to the moon. You're awesome!!</p><br><p></p>" . $html;
         }
         else {
-          $html = "<p>You moved <strong>$distance miles</strong> closer to the moon. You're awesome!!</p>";
+          $html = "<p>You moved <strong>$distance miles</strong> closer to the moon. You're awesome!!</p>" . $html;
         }
     }
     // if the form is submitted but isn't filled correctly

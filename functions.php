@@ -124,6 +124,7 @@ function jms_pull_from_db() {
     $query ="SELECT SUM(distance) FROM $table_name";
     $results = $wpdb->get_var($query);
     $percentage = ($results/$total_miles_moon)*100;
+    $remaining = $total_miles_moon - $results;
 
     ?>
     <div class="">
@@ -131,7 +132,7 @@ function jms_pull_from_db() {
         <strong>Miles Moved: <?php echo($results); ?> Miles</strong>
       </div>
       <div id="progress-bar" class="all-rounded center-element">
-        <div id="progress-bar-percentage" class="all-rounded" style="width: <?php echo($percentage); ?>%"><span><?php echo($results); ?>/238,900 miles</span></div>
+        <div id="progress-bar-percentage" class="all-rounded" style="width: <?php echo($percentage); ?>%"><span><?php echo($results); ?> Miles to Go</span></div>
       </div>
     </div>
     <?php

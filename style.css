@@ -1,6 +1,17 @@
 body{
 	font-family:"futura-pt", sans-serif;
 }
+nav{
+  display:none;
+}
+
+.full-container{
+  display:flex;
+  flex-direction: row;
+}
+.content-area{
+  width:95% !important;
+}
 
 input[type="text"]{
   font-family: "futura-pt-condensed",sans-serif;
@@ -8,6 +19,9 @@ input[type="text"]{
   font-size: 1.4em;
 }
 input[type=submit]{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   margin-top:5px;
 	background:#ffd800;
   text-decoration: none;
@@ -26,7 +40,7 @@ input[type=submit]{
 }
 
 #progress-bar {
-    width: 80%;;
+    width: 80%;
     background: #cccccc;
     position: relative;
 }
@@ -49,7 +63,7 @@ input[type=submit]{
 
 /*Allow background image to be seen*/
 .home #main {
-    background-color: transparent !important;
+  background-color: transparent !important;
 }
 
 body.responsive.layout-full #page-wrapper .full-container{
@@ -58,4 +72,70 @@ body.responsive.layout-full #page-wrapper .full-container{
 
 .encourage{
   font-size:125%;
+}
+
+/** Footer**/
+.footer-extra-data{
+  font-size:1.5em;
+}
+
+
+/** Mobile Responsive**/
+@media only screen and (max-width: 780px) {
+  /**Full site**/
+  #main{
+    padding-bottom: 0%;
+  }
+  /**Footer**/
+	.site-footer{
+    padding: 30px 30px 0px 30px !important;
+  }
+  .footer-extra-data{
+    font-size:1em;
+	}
+  /**Input section**/
+	.moonwalkform{
+    text-align: center;
+  }
+  input[type="text"]{
+    width:80%;
+    font-size: 1.2em;
+  }
+  strong{
+    font-size:85%;
+  }
+  /**Header**/
+  #masthead .hgroup{
+    padding-bottom: 0%;
+    padding-top: 0%;
+  }
+
+  .flex-row-planet-links{
+    display: flex !important;
+    flex-direction: row !important;
+  }
+  .full-size-logo{
+    display: none;
+  }
+  .home #main {
+    padding-top: 0%;
+	}
+  .widget{
+    padding-bottom:0% !important;
+  }
+  .panel-grid{
+    margin:0em 0em 0em 0em !important;
+  }
+  .panel-grid-cell{
+    margin: 0em 0em 0em 0em !important;
+  }
+
+  /***To center elements and text*/
+  .center-text{
+    text-align: center;
+  }
+  .center-element{
+    margin:auto;
+  }
+
 }

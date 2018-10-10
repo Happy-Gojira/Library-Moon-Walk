@@ -41,7 +41,10 @@ function moon_insert_into_db() {
     ?>
     <form name="stepsToMoon" method="POST" class="moonwalkform">
       <fieldset>
-        <legend>Input your Exercise--steps, miles, or minutes</legend>
+        <legend>
+          <span>Input your Exercise</span><br>
+          <span>Steps, Miles, or Minutes</span>
+        </legend>
         <input type="text" id="distance" name="distance" placeholder="Enter Your Distance or Time"><br>
         <input type="radio" name="distance_type" value="steps" id="steps" checked>
         <label for="steps">Steps</label>
@@ -123,9 +126,13 @@ function jms_pull_from_db() {
     $percentage = ($results/$total_miles_moon)*100;
 
     ?>
-    <strong>Total Miles moved so far: <?php echo($results); ?> Miles</strong>
-    <div id="progress-bar" class="all-rounded">
-      <div id="progress-bar-percentage" class="all-rounded" style="width: <?php echo($percentage); ?>%"><span><?php echo($results); ?>/238,900 miles</span></div>
+    <div class="">
+      <div class="center-text">
+        <strong>Miles Moved: <?php echo($results); ?> Miles</strong>
+      </div>
+      <div id="progress-bar" class="all-rounded center-element">
+        <div id="progress-bar-percentage" class="all-rounded" style="width: <?php echo($percentage); ?>%"><span><?php echo($results); ?>/238,900 miles</span></div>
+      </div>
     </div>
     <?php
 

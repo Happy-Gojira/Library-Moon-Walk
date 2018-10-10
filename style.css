@@ -12,7 +12,13 @@ nav{
 .content-area{
   width:95% !important;
 }
-
+.center-text{
+  font-size: 1.5em;
+}
+/**Form**/
+.moonwalkform legend{
+  font-size:1.5em;
+}
 input[type="text"]{
   font-family: "futura-pt-condensed",sans-serif;
   width:14em;
@@ -34,11 +40,12 @@ input[type=submit]{
     -moz-border-radius: 5px;
     border-radius: 5px;
 }
-
+/**
 .spacer {
     display: block;
-}
+}**/
 
+/**Progress Bar**/
 #progress-bar {
     width: 80%;
     background: #cccccc;
@@ -58,7 +65,9 @@ input[type=submit]{
     position: absolute;
     width: 100%;
     left: 0;
+  font-size:1.5em;
 }
+
 .wide-grey.panel-row-style{border:none;}
 
 /*Allow background image to be seen*/
@@ -69,11 +78,11 @@ input[type=submit]{
 body.responsive.layout-full #page-wrapper .full-container{
   max-width:95%;
 }
-
+/**
 .encourage{
   font-size:125%;
 }
-
+**/
 /** Footer**/
 .footer-extra-data{
   font-size:1.5em;
@@ -88,7 +97,7 @@ body.responsive.layout-full #page-wrapper .full-container{
   }
   /**Footer**/
 	.site-footer{
-    padding: 30px 30px 0px 30px !important;
+    padding: 0px 30px 0px 30px !important;
   }
   .footer-extra-data{
     font-size:1em;
@@ -97,17 +106,18 @@ body.responsive.layout-full #page-wrapper .full-container{
 	.moonwalkform{
     text-align: center;
   }
+	.moonwalkform legend{
+    font-size: 1.1em;
+  }
   input[type="text"]{
     width:80%;
     font-size: 1.2em;
   }
-  strong{
-    font-size:85%;
-  }
+
   /**Header**/
   #masthead .hgroup{
-    padding-bottom: 0%;
     padding-top: 0%;
+    padding-bottom: 0%;
   }
 
   .flex-row-planet-links{
@@ -117,6 +127,7 @@ body.responsive.layout-full #page-wrapper .full-container{
   .full-size-logo{
     display: none;
   }
+  /**Mobile Spacing**/
   .home #main {
     padding-top: 0%;
 	}
@@ -124,14 +135,25 @@ body.responsive.layout-full #page-wrapper .full-container{
     padding-bottom:0% !important;
   }
   .panel-grid{
-    margin:0em 0em 0em 0em !important;
+    margin:1em 0em 0em 0em !important;
   }
   .panel-grid-cell{
     margin: 0em 0em 0em 0em !important;
   }
+  .panel-row-style{
+    flex-direction:row !important;
+  }
+  /**Progress Bar**/
+  strong{
+    font-size:85%;
+  }
+  #progress-bar-percentage span {
+    font-size:1em;
+  }
 
   /***To center elements and text*/
   .center-text{
+    font-size:1em;
     text-align: center;
   }
   .center-element{

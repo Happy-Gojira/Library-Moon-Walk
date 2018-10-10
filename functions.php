@@ -42,7 +42,7 @@ function moon_insert_into_db() {
     <form name="stepsToMoon" method="POST" class="moonwalkform">
       <fieldset>
         <legend>
-          <span>Input your Exercise</span><br>
+          <span><strong>Input your Exercise</strong></span><br>
           <span>Steps, Miles, or Minutes</span>
         </legend>
         <input type="text" id="distance" name="distance" placeholder="Enter Your Distance or Time"><br>

@@ -129,10 +129,10 @@ function jms_pull_from_db() {
     ?>
     <div class="">
       <div class="center-text">
-        <strong>Miles Moved: <?php echo($results); ?> Miles</strong>
+        <strong>Miles Moved: <?php echo number_format($results); ?> Miles</strong>
       </div>
       <div id="progress-bar" class="all-rounded center-element">
-        <div id="progress-bar-percentage" class="all-rounded" style="width: <?php echo($percentage); ?>%"><span class="progressBar-text"><?php echo($remaining); ?> Miles to Go</span></div>
+        <div id="progress-bar-percentage" class="all-rounded" style="width: <?php echo($percentage); ?>%"><span class="progressBar-text"><?php echo number_format($remaining); ?> Miles to Go</span></div>
       </div>
     </div>
     <?php

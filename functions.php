@@ -127,13 +127,11 @@ function jms_pull_from_db() {
     $remaining = $total_miles_moon - $results;
 
     ?>
-    <div class="">
-      <div class="center-text">
-        <strong>Miles Moved: <?php echo number_format($results); ?> Miles</strong>
-      </div>
-      <div id="progress-bar" class="all-rounded center-element">
-        <div id="progress-bar-percentage" class="all-rounded" style="width: <?php echo($percentage); ?>%"><span class="progressBar-text"><?php echo number_format($remaining); ?> Miles to Go</span></div>
-      </div>
+    <div class="center-text">
+      <strong>Miles Moved: <?php echo number_format($results); ?> Miles</strong>
+    </div>
+    <div id="progress-bar" class="all-rounded center-element">
+      <div id="progress-bar-percentage" class="all-rounded" style="width: <?php echo($percentage); ?>%"><span class="progressBar-text"><?php echo number_format($remaining); ?> Miles to Go</span></div>
     </div>
     <?php
 

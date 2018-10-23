@@ -16,7 +16,7 @@ nav{
   font-size: 1.5em;
 }
 /**Form**/
-.moonwalkform legend{
+.moonwalkform legend, label{
   font-size:1.5em;
 }
 input[type="text"]{
@@ -78,11 +78,17 @@ input[type=submit]{
 body.responsive.layout-full #page-wrapper .full-container{
   max-width:95%;
 }
-/**
-.encourage{
-  font-size:125%;
+/*Timely Calendar*/
+.entry-content p{
+  color:#333;
 }
-**/
+
+/**Bumps text size**/
+.encourage{
+  font-size:1.5em;
+  text-align:center;
+}
+
 /** Footer**/
 .footer-extra-data{
   font-size:1.5em;
@@ -106,7 +112,7 @@ body.responsive.layout-full #page-wrapper .full-container{
 	.moonwalkform{
     text-align: center;
   }
-	.moonwalkform legend{
+	.moonwalkform legend, label{
     font-size: 1.1em;
   }
   input[type="text"]{

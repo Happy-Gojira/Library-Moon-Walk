@@ -43,7 +43,7 @@ function moon_insert_into_db() {
       <fieldset>
         <legend>
           <span><strong>Input your Exercise</strong></span><br>
-          <span>Steps, Miles, or Minutes</span>
+          <span><strong>Steps, Miles, or Minutes</strong></span>
         </legend>
         <input type="text" id="distance" name="distance" placeholder="Enter Your Distance or Time"><br>
         <input type="radio" name="distance_type" value="steps" id="steps" checked>
@@ -99,13 +99,13 @@ function moon_insert_into_db() {
             )
         );
         if ($distance == 1) {
-          $html = "<p>You moved <strong>$distance mile</strong> closer to the moon. You're awesome!!</p><br><p></p>" . $html;
+          $html = "<span class='encourage'>You moved <strong>$distance mile</strong> closer to the moon.</span> <br> <span class='encourage'>You're awesome!!</span>" . $html;
         }
         else {
-          $html = "<p>You moved <strong>$distance miles</strong> closer to the moon. You're awesome!!</p>" . $html;
+          $html = "<span class='encourage'>You moved <strong>$distance miles</strong> closer to the moon.</span> <br> <span class='encourage'> You're awesome!!</span>" . $html;
         }
     }
-    // if the form is submitted but isn't filled correctly
+    // if the form is submitted but the name is empty
     if ( isset( $_POST["submit_form"] ) && ($_POST["distance"] == "" || strlen($_POST["zipcode"]) != 5))
         $html .= "<p>You need to enter a distance and a zipcode.</p>";
     // outputs everything
@@ -114,8 +114,7 @@ function moon_insert_into_db() {
 }
 // adds a shortcode you can use: [insert-into-db]
 add_shortcode('moon-db-insert', 'moon_insert_into_db');
-
-// function to pull the data and build a bar graph
+// function to pull the data and build a bargraph
 function jms_pull_from_db() {
 
     global $wpdb;

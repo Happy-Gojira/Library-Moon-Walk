@@ -12,9 +12,12 @@
 </div>
 
   <h1>Form Test</h1>
-  <form action="#v_form" name="stepsToMoon" method="POST" id="v_form">
+  <form id="steps" name="stepsToMoon" method="POST" class="moonwalkform">
     <fieldset>
-      <legend>Input your Exercise--steps, miles, or minutes.</legend>
+      <legend>
+        <span><strong>Input your Exercise</strong></span><br>
+        <span><strong>Steps, Miles, or Minutes</strong></span>
+      </legend>
       <input type="text" id="distance" name="distance" placeholder="Enter Your Distance or Time"><br>
       <input type="radio" name="distance_type" value="steps" id="steps" checked>
       <label for="steps">Steps</label>
@@ -22,12 +25,10 @@
       <label for="miles">Miles</label>
       <input type="radio" name="distance_type" id="minutes" value="minutes">
       <label for="minutes">Minutes</label><br>
-
-    <input type="text" name="zipcode" maxlength="6" placeholder="Enter Your Zip Code">
-</fieldset>
-  <input type="submit" name="submit_form" value="submit" />
+      <input class="zip" type="text" name="zipcode" maxlength="6" placeholder="Enter Your Zip Code">
+    </fieldset>
+    <input type="submit" name="submit_form" value="submit" />
   </form>
-  <progress value="22" max="100"></progress>
 
 </body>
 </html>

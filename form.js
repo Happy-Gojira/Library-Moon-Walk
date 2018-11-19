@@ -1,8 +1,9 @@
-$('#steps').submit(function()
- {
+(function($)
+{
+  $('stepsForm').submit(function(){
     $("input[type='submit']", this)
-      .val("Please Wait...")
-      .attr('disabled', 'disabled');
-
+    .val("Please Wait...")
+    .attr('disabled', 'disabled');
     return true;
   });
+});

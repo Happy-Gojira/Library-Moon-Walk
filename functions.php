@@ -39,7 +39,7 @@ function moon_insert_into_db() {
     // starts output buffering
     ob_start();
     ?>
-    <form name="stepsToMoon" method="POST" class="moonwalkform">
+    <form id="stepsForm" name="stepsToMoon" method="POST" class="moonwalkform">
       <fieldset>
         <legend>
           <span><strong>Input your Exercise</strong></span><br>
@@ -89,8 +89,8 @@ function moon_insert_into_db() {
             }
             break;
           }
-
-        $wpdb->insert(
+          
+          $wpdb->insert(
             $table,
             array(
                 'distance' => $distance,

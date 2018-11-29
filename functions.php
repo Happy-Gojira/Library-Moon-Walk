@@ -89,8 +89,8 @@ function moon_insert_into_db() {
             }
             break;
           }
-          
-          $wpdb->insert(
+
+        $wpdb->insert(
             $table,
             array(
                 'distance' => $distance,

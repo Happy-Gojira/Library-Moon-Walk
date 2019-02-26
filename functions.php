@@ -62,17 +62,18 @@ function moon_insert_into_db() {
     if ( isset( $_POST["submit_form"] ) && ($_POST["distance"] != "" && strlen($_POST["zipcode"]) == 5 )) {
         $table = $wpdb->prefix."library_steps";
         $distance = sanitize_text_field($_POST["distance"]);
-        $distance = filter_var($_POST["distance"], FILTER_SANITIZE_NUMBER_FLOAT,FILTER_FLAG_ALLOW_FRACTION);
         $distance_type = $_POST["distance_type"];
         $zipcode = sanitize_text_field($_POST["zipcode"]);
 
+        $distance = intval($distance); //if distance is not a number defults to zero
+
         // convert the distance into Miles
         $steps_exercise_constant = 2000;
-        $minutes_exercise_constant = 30;
+        $minutes_exercise_constant = 15;
         switch ($distance_type) {
           case 'steps':
             $distance = $distance / $steps_exercise_constant;
-            if ($distance < 1) {
+            if ($distance < 1 || $distance > 167) {
               $distance = 1;
             }
             else {
@@ -81,13 +82,22 @@ function moon_insert_into_db() {
             break;
           case 'minutes':
             $distance = $distance / $minutes_exercise_constant;
-            if ($distance < 1) {
-              $distance = 1;
+            if ($distance < 1 || $distance > 167) {
+              $distance = 0;
             }
             else {
               $distance = round($distance);
             }
             break;
+          case 'miles':
+            if($distance < 1 || $distance > 167) {
+              $distance = 0;
+            }
+            else {
+              $distance = round($distance);
+            }
+            break;
+
           }
 
         $wpdb->insert(

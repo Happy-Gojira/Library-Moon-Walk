@@ -15,6 +15,10 @@ nav{
 .center-text{
   font-size: 1.5em;
 }
+/**About us page**/
+.about-us-block{
+  color:#707070;
+}
 /**Form**/
 .moonwalkform legend, label{
   font-size:1.5em;
